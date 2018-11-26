@@ -8,11 +8,35 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Move-A-Ad</title>
+    <title>Ad-IT</title>
   </head>
   <body>
-    <div id="videos" class="videos"></div>
-    <video id="video" class="video" src="" muted="true" autoplay="false"></video>
-    <div id="adInfo" class="addInfo"></div>
+      <div class="container">
+        <section id="bagSummary" class="BagSummary">
+          <!--a href="https://www.next.co.il/he/shoppingbag" data-link-id="01-07" data-link-name="Shopping Bag" rel="nofollow"-->
+          <div id="icon" class="Icon">
+            <div id="ItemCount" class="ItemCount">
+                <span id="itemCountSpanId"></span>
+            </div>
+          </div>
+          <div class="BagTextClipping  nextDisplayNone">
+            <div id="bagtext" class="BagSummaryText">0.00 ₪</div>
+          </div>
+          <div class="ClearBoth"></div>
+          <div id="addedToBagDialogue" class="addedToBagDialogue nextDisplayNone">
+            <div id="bagHeader" class="bagHeader"></div>
+            <div id="cartItems" class="cartItemIframe"></div>
+          </div>
+
+        </section>
+
+        <div class="videosContainer">
+          <img id="netflixLogo" class="netflixLogo" src="images/atv_logo.png" />
+          <div id="videos" class="videos">
+          </div>
+        </div>
+        <video id="video" class="video" src="" muted="true" autoplay="false"></video>
+        <div id="adInfo" class="addInfo"></div>
+      </div>
   </body>
 </html>
