@@ -15,6 +15,7 @@ const AdIT = {
   canplay: function(ev) {
     document.querySelector('#video').style.display = 'block';
     document.querySelector('#videos').style.display = 'none';
+    document.querySelector('#bagSummary').style.display = 'block';
 
     this.video = document.querySelector('#video');
     videoWidth = this.video.videoWidth;
@@ -43,8 +44,8 @@ const AdIT = {
 
       const newItem = document.createElement('div');
 
-      const left = (((i + 1) % 5) * this.thumbSize.w + 40);
-      const top = ((Math.ceil((i + 1) / 5) - 1) * 244 + 20);
+      const left = (((i + 1) % 5) * this.thumbSize.w + 20);
+      const top = ((Math.ceil((i + 1) / 5) - 1) * this.thumbSize.h + 20);
 
       newItem.onmouseover = this.onMovieOver.bind(this);
       newItem.onmouseout = this.onMovieOut.bind(this);
@@ -76,8 +77,8 @@ const AdIT = {
       this.items[movieId].block = true;
 
       $(el).animate({
-        top: (item.pos.top - 10) + 'px',
-        left: (item.pos.left - 10) + 'px',
+        top: (item.pos.top - 20) + 'px',
+        left: (item.pos.left - 20) + 'px',
         width: (this.thumbSize.w + 40) + 'px',
         height: (this.thumbSize.h + 40) + 'px'
       }, 120).css('zIndex', 2);
@@ -91,8 +92,8 @@ const AdIT = {
     if (el.id.indexOf('movie_') === 0) {
       el.style.zIndex = 1;
       $(el).animate({
-        top: (item.pos.top + 10) + 'px',
-        left: (item.pos.left + 10) + 'px',
+        top: (item.pos.top) + 'px',
+        left: (item.pos.left) + 'px',
         width: this.thumbSize.w + 'px',
         height: this.thumbSize.h + 'px'
       }, 120, () => {

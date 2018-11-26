@@ -61,29 +61,43 @@ body {
   display: none;
 }
 
+.BagSummary {
+  display: none;
+  float: right;
+  width: auto;
+}
+
 .BagSummary .Icon {
   float: right;
-  margin: 1px 0 0 0;
-  width: 24px;
-  height: 21px;
-  padding: 9px 2px 2px 2px;
-  background: url(../images/Bag.png) no-repeat;
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  background: url(../images/amazon_unsign.png) no-repeat;
 }
 
 .BagSummary .Icon-active {
     float: right;
-    margin: 1px 0 0 0;
-    width: 24px;
-    height: 21px;
-    background: url(../images/BagActive.png) no-repeat;
-    padding: 9px 2px 2px 2px;
-    color: #4f8855;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    background: url(../images/amazon_sign.png) no-repeat;
+}
+
+.BagSummary .Icon-active .ItemCount {
+  left: -4px;
+    position: relative;
+    top: -4px;
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .BagSummary .Icon .ItemCount {
-    overflow: hidden;
-    height: 16px;
-    padding-left: 8px;
+    display: none;
 }
 
 .BagSummary .BagTextClipping {
